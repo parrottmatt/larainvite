@@ -4,7 +4,6 @@ namespace Junaidnasir\Larainvite\Events;
 
 use Illuminate\Foundation\Events\Dispatchable;
 use Illuminate\Queue\SerializesModels;
-use Junaidnasir\Larainvite\Models\LaraInviteModel;
 
 class Invited
 {
@@ -17,7 +16,7 @@ class Invited
      *
      * @return void
      */
-    public function __construct(LaraInviteModel $invitation)
+    public function __construct($invitation)
     {
         $this->invitation = $invitation;
     }
